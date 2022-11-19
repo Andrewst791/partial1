@@ -1,9 +1,10 @@
-const express = require('express')
+// const express = require('express')
 const user_routes = require('./user.routes')
+// const project_routes = express.Router()
 
 const app_routes = (app) => {
-    app.use('/api/v1', user_routes)
-    app.get('/test', (req, res)=>{res.json('Running test')})
+    app.use('/api/v1/users', user_routes)
+    // project_routes.use('/users', user_routes)
 }
 
 module.exports = app_routes
